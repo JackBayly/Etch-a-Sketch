@@ -1,0 +1,43 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  width: 600px;
+  margin: 0 auto;
+  height: 600px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  border: solid black;
+  margin-top: 50px;
+  
+}
+
+.grid-item {
+  padding: 50%;
+    text-align: center;
+  
+}
+#buttons {
+   
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 150px;
+  
+}
+#btn {
+  margin-top: 10px;
+}
+
+h1 {
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  text-align:center;
+  padding: 10px;
+}
