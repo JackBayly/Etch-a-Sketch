@@ -23,6 +23,8 @@ function makeRows(rows, cols) {
 
 
 
+
+
 //Adjust grid cell numbers button
 let gridNums= document.getElementById("input").value;
 

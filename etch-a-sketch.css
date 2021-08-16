@@ -5,9 +5,9 @@
 
 #container {
   display: grid;
-  width: 30%;
+  width: 600px;
   margin: 0 auto;
-  height: 30%;
+  height: 600px;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   border: solid black;
@@ -23,7 +23,7 @@
 }
 #buttons {
   margin-left: 5vw; 
-  margin-top: -40vh;
+  margin-top: -30vh;
 }
 #btn {
   margin-top: 10px;
@@ -37,17 +37,17 @@ h1 {
   padding: 10px;
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1600px) {
   
   #buttons {
     margin-left: 35vw; 
     margin-top: 3vh;
   }
 }  
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
   #container {
-    width: 70%;
-    height: 70%;
+    width: 400px;
+    height: 400px;
     margin-bottom: 20px;
   }
   
