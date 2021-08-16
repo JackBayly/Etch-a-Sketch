@@ -17,7 +17,7 @@ function makeRows(rows, cols) {
     container.appendChild(cell).className = "grid-item";
     
   };
-  cell.addEventListener("click", function( event ) {
+  cell.addEventListener("touchstart", function( event ) {
        
   event.target.style.backgroundColor = "black";},);
     container.appendChild(cell).className = "grid-item";
