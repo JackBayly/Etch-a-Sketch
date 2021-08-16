@@ -2,23 +2,28 @@
 <head>
 <script src="etch-a-sketch.js" defer></script>
 <link rel="stylesheet" href="etch-a-sketch.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <h1>Etch-a-Sketch</h1>
-<div id="buttons">
-<form>
-    <input id="input" type="number" name="quantity" min="0" max="4" required ></input>
-    <button  onClick="refreshPage()"type="button" id="btninput">Number of squares per side?</button>
-    
-</form>
-<button type="button" id="btn">Clear</button>
-</div>    
+  
+
 <div id="container">
         
-    </div>
-   
+    
+   </div>
+   <div id="buttons">
+    <form>
+        <input id="input" type="number" name="quantity" min="0" max="4" required ></input>
+        <button  onClick="refreshPage()"type="button" id="btninput">Number of squares per side?</button>
+        
+    </form>
+    <button type="button" id="btn">Clear</button>
+    </div>    
 
+    <script src=”http://hammerjs.github.io/dist/hammer.min.js”></script>
 
+    <script src=”js/hoverontouch/hoverontouch.js”></script>
 </body>
 
 

@@ -5,13 +5,14 @@
 
 #container {
   display: grid;
-  width: 600px;
+  width: 30%;
   margin: 0 auto;
-  height: 600px;
+  height: 30%;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   border: solid black;
   margin-top: 50px;
+  
   
 }
 
@@ -21,14 +22,8 @@
   
 }
 #buttons {
-   
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin-left: 150px;
-  
+  margin-left: 5vw; 
+  margin-top: -40vh;
 }
 #btn {
   margin-top: 10px;
@@ -41,3 +36,24 @@ h1 {
   text-align:center;
   padding: 10px;
 }
+
+@media only screen and (max-width: 1350px) {
+  
+  #buttons {
+    margin-left: 35vw; 
+    margin-top: 3vh;
+  }
+}  
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+  
+  
+  #buttons {
+    margin-left: 25vw; 
+    margin-top: 3vh;
+  }
+} 
