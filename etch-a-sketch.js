@@ -7,7 +7,7 @@ function makeRows(rows, cols) {
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
   
-    cell.addEventListener("mouseover", function( event ) {
+   /* cell.addEventListener("mouseover", function( event ) {
        
         event.target.style.backgroundColor = "black";},); 
         
@@ -15,13 +15,13 @@ function makeRows(rows, cols) {
 
 
     container.appendChild(cell).className = "grid-item";
-    
-  };
+   */ 
+  //}
   cell.addEventListener("touchstart", function( event ) {
        
   event.target.style.backgroundColor = "black";},);
     container.appendChild(cell).className = "grid-item";
-
+  }
 }
 
 
