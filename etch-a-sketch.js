@@ -1,57 +1,64 @@
-const container = document.getElementById("container");
+//Makes work on mobile
+const touch = (e) => {
+  e.preventDefault();
+  let location = e.changedTouches[0];
+  let target = document.elementFromPoint(
+    location.clientX,
+    location.clientY
+  );
+  target.style.backgroundColor = "green";
 
-//Makes Grid
-function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
-    let cell = document.createElement("div");
-  
-    cell.addEventListener("mouseover", function( event ) {
-       
-        event.target.style.backgroundColor = "black";},); 
-        
+  document.body.style.backgroundColor = "white";
+};
 
+let container = document.getElementById("container");
 
+function createGrids(gridSquared) {
+  let gridHeight = document.getElementById("container").clientHeight;
+  let gridWidth = document.getElementById("container").clientWidth;
+  let numberOfGrids = gridSquared * gridSquared;
+  for (let i = 0; i < numberOfGrids; i++) {
+    let grids = document.createElement("div");
+    grids.style.height = gridHeight / gridSquared + "px";
+    grids.style.width = gridWidth / gridSquared + "px";
+    grids.style.background = "white";
+    grids.classList.add("gridClass");
+    grids.addEventListener("mouseover", function x() {
+      grids.style.background = "green"
+    })
 
-    container.appendChild(cell).className = "grid-item";
-   
-  
-  cell.addEventListener("touchend", function( event ) {
-       
-  event.target.style.backgroundColor = "black";},);
-    container.appendChild(cell).className = "grid-item";
+    grids.addEventListener('touchmove', touch);
+    grids.addEventListener('touchstart', touch);
+
+    container.appendChild(grids);
   }
 }
+createGrids(10);
+//Takes value from input and calls createGrids function
+let gridAmount = document.getElementById("makeGrid").value;
+function makeGrid() {
 
-
-
-
-
-
-
-//Adjust grid cell numbers button
-let gridNums= document.getElementById("input").value;
-
-if (gridNums<=100) {
-
-let h= document.getElementById("btninput");
-h.addEventListener("click",
-    makeRows(gridNums,gridNums),
- );
+  let gridAmount = document.getElementById("makeGrid").value;
+  if (gridAmount > 100) {
+    alert("Please input a number less than 100")
+    return
+  } else if (gridAmount < 1) {
+    alert("Please input a number greater than 0")
+  } else
+    createGrids(gridAmount);
 }
- function refreshPage(){
-  window.location.reload();
-} 
+//Submit button
+let submitGrid = document.getElementById("submit");
+submitGrid.addEventListener("click", clearGrids);
+submitGrid.addEventListener("click", makeGrid);
 
+//Clear button
+let clear = document.getElementById("clear");
+clear.addEventListener("click", clearGrids);
 
-// Clear Button
-let btn =document.getElementById("btn");
-let grid= document.querySelectorAll(".grid-item");
-function style (){for (i = 0; i < (gridNums*gridNums); i++) {
-  grid[i].style.backgroundColor = "white";
-}};
-let k= btn.addEventListener("click", style)
-
-
+function clearGrids() {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+}
 

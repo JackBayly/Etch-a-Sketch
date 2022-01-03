@@ -4,26 +4,27 @@
 }
 
 #container {
-  display: grid;
   width: 600px;
-  margin: 0 auto;
   height: 600px;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-  border: solid black;
-  margin-top: 50px;
-  
-  
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+ 
 }
 
-.grid-item {
-  padding: 50%;
-    text-align: center;
-  
+.gridClass {
+ 
+  box-sizing: border-box;
+ border: 1px solid black;
+   overflow: hidden;
+ 
 }
 #buttons {
-  margin-left: 5vw; 
-  margin-top: -30vh;
+  margin-left: 40%; 
+  margin-top: 2%;
 }
 #btn {
   margin-top: 10px;
