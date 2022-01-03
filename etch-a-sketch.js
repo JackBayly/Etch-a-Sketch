@@ -6,8 +6,15 @@ const touch = (e) => {
     location.clientX,
     location.clientY
   );
+  
   target.style.backgroundColor = "green";
-
+  
+//prevents other elements from being turned green
+  document.documentElement.style.backgroundColor="white";
+  document.getElementById("clear").style.backgroundColor="";
+  document.getElementById("submit").style.backgroundColor="";
+  document.getElementById("buttons").style.backgroundColor="";
+  document.getElementById("makeGrid").style.backgroundColor="" 
   document.body.style.backgroundColor = "white";
 };
 
