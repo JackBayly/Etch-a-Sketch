@@ -1,5 +1,5 @@
 # Green Etch-a-Sketch
-<p>An Etch-a-Sketch game built with HTML, CSS, and JavaScript.</p>
+<p>A green Etch-a-Sketch game built with HTML, CSS, and JavaScript.</p>
 <p>Here's a live demo: https://jackbayly.github.io/Etch-a-Sketch/ </p>
 <h2>Things Learned</h2>
 <ul>
