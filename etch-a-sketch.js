@@ -16,6 +16,10 @@ let container = document.getElementById("container");
 function createGrids(gridSquared) {
   let gridHeight = document.getElementById("container").clientHeight;
   let gridWidth = document.getElementById("container").clientWidth;
+  if(screen.width<701){
+    gridHeight=250;
+    gridWidth=250;
+  }
   let numberOfGrids = gridSquared * gridSquared;
   for (let i = 0; i < numberOfGrids; i++) {
     let grids = document.createElement("div");
